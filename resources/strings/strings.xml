@@ -1,11 +1,12 @@
 <strings>
 
-    <string id="AppName">u-de-chile-wf</string>
+    <string id="AppName">Universidad de Chile</string>
 
     <string id="BackgroundColorTitle">Background Color</string>
     <string id="ForegroundColorTitle">Foreground Color</string>
     <string id="MilitaryFormatTitle">Military Format for 24 Hour Time</string>
-
+    <string id="ShowStepsTitle">Show Steps</string>
+   
     <string id="ColorBlack">Black</string>
     <string id="ColorDarkGray">Dark Gray</string>
     <string id="ColorLightGray">Light Gray</string>

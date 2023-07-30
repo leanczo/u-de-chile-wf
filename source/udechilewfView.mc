@@ -3,6 +3,9 @@ import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.System;
 import Toybox.WatchUi;
+using Toybox.ActivityMonitor as Act;
+using Toybox.Activity as Acty;
+
 
 class udechilewfView extends WatchUi.WatchFace {
 	var logo;
@@ -72,6 +75,16 @@ class udechilewfView extends WatchUi.WatchFace {
         // Time
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(widthCenter, (heightScreen / 8) * 6, Graphics.FONT_LARGE, timeString, Graphics.TEXT_JUSTIFY_CENTER);
+        
+    	// Steps
+    	if(getApp().getProperty("ShowSteps"))
+    	{
+	    	var positionXFootstepsText = widthScreen / 2;
+	        var positionYFootstepsText = heightScreen / 8;
+	        var steps = ActivityMonitor.getInfo().steps.toString();
+	        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+			dc.drawText(positionXFootstepsText, positionYFootstepsText, Graphics.FONT_SYSTEM_XTINY, steps + " Steps", Graphics.TEXT_JUSTIFY_CENTER);
+    	}
     }
 
     // Called when this View is removed from the screen. Save the
